@@ -1,11 +1,24 @@
+import { useNavigate } from "react-router-dom";
+
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
-    <nav className="w-full bg-black border-t-4 border-blue-500">
+    <nav className="w-full bg-black border-t-4 border-black-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
         <div className="flex items-center gap-2 -ml-2">
-          <h1 className="text-white font-semibold text-lg">AnalyzeAI</h1>
+          <h1
+            className="text-white font-semibold text-lg cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            AnalyzeAI
+          </h1>
         </div>
-        <button className="!bg-white text-black px-4 py-1.5 rounded-md text-sm font-medium hover:!bg-gray-100 transition-colors">
+
+        <button
+          className="!bg-white text-black px-4 py-1.5 rounded-md text-sm font-medium hover:!bg-gray-100 transition-colors"
+          onClick={() => navigate("/analyze")}
+        >
           Get started
         </button>
       </div>
