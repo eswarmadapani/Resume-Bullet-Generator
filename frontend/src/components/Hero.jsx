@@ -34,7 +34,7 @@ function Hero({ onTry }) {
         {/* Glassmorphic button */}
         <button
           onClick={onTry}
-          className="bg-white/20 backdrop-blur-md border border-white/30 text-white px-7 py-2.5 rounded-xl text-sm font-semibold shadow-lg hover:shadow-xl hover:bg-white/30 active:scale-[0.98] transition-all"
+          className="bg-white/20 backdrop-blur-md border border-white/30 text-black px-7 py-2.5 rounded-xl text-sm font-semibold shadow-lg hover:shadow-xl hover:bg-white/30 active:scale-[0.98] transition-all"
         >
           Try It →
         </button>
