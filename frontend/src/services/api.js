@@ -1,6 +1,9 @@
 // API service functions
 import axios from 'axios';
 
+// Use environment variable or fallback to localhost
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5173';
+
 export const analyzeResume = async (resumeFile, jobDescription) => {
     const formData = new FormData();
 
@@ -8,7 +11,7 @@ export const analyzeResume = async (resumeFile, jobDescription) => {
     formData.append('job_description', jobDescription);
 
     const response = await axios.post(
-        "http://localhost:8000/api/analyze",
+        `${API_URL}/api/analyze`,
         formData,
     );
     return response.data;
