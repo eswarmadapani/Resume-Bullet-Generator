@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Use environment variable or fallback to localhost
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5173';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 export const analyzeResume = async (resumeFile, jobDescription) => {
     const formData = new FormData();
